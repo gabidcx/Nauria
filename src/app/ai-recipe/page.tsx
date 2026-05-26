@@ -167,7 +167,7 @@ export default function AIRecipePage() {
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
             className="text-2xl font-light text-white leading-snug mb-1"
           >
-            What's in your kitchen?
+            What&apos;s in your kitchen?
           </p>
           <p className="text-[13px] text-white/65 leading-relaxed">
             Select the ingredients you have and Nauria will generate a beautiful recipe
@@ -321,7 +321,7 @@ export default function AIRecipePage() {
                 <div className="flex items-center gap-2 mb-2">
                   <ShoppingCart size={16} className="text-[#a06a10]" strokeWidth={1.75} />
                   <p className="text-[13px] font-semibold text-[#a06a10]">
-                    You'll need to buy
+                    You&apos;ll need to buy
                   </p>
                 </div>
                 <ul className="space-y-1">
