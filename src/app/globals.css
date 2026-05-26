@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── BASE RESETS & GLOBAL STYLES ─────────────────────────────────────────── */
+
+@layer base {
+  /* Smooth font rendering */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* iOS tap highlight */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Better box model */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default button styles */
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* Smooth scroll for the whole app */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Remove default list styles */
+  ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove default anchor decoration */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* ── COMPONENT UTILITIES ─────────────────────────────────────────────────── */
+
+@layer utilities {
+  /* Hide scrollbar cross-browser */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Safe area insets for iPhone notch/home indicator */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  /* Screen-level horizontal padding */
+  .px-screen {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Truncate text utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* ── MOBILE APP CONTAINER ────────────────────────────────────────────────── */
+
+@layer components {
+  /* Main content area with bottom nav space */
+  .screen-content {
+    @apply min-h-screen pb-[100px] bg-cream;
+  }
+
+  /* Horizontal scrolling container (chip rows, card rows) */
+  .scroll-x {
+    @apply flex gap-2 overflow-x-auto scrollbar-none pb-0.5;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-white rounded-lg border-[0.5px] border-[rgba(0,0,0,0.08)];
+  }
+
+  /* Small card */
+  .card-sm {
+    @apply bg-white rounded-md border-[0.5px] border-[rgba(0,0,0,0.08)];
+  }
+
+  /* Green tinted card */
+  .card-green {
+    @apply bg-green-light rounded-lg border-[0.5px] border-green-mid;
+  }
+}
+
+/* ── ANIMATIONS ──────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  /* Staggered fade-up for list items */
+  .stagger-1 { animation-delay: 50ms; }
+  .stagger-2 { animation-delay: 100ms; }
+  .stagger-3 { animation-delay: 150ms; }
+  .stagger-4 { animation-delay: 200ms; }
+  .stagger-5 { animation-delay: 250ms; }
+}

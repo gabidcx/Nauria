@@ -1,0 +1,25 @@
+{
+  "name": "Nauria",
+  "short_name": "Nauria",
+  "description": "Your calm kitchen companion",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#3a6b47",
+  "background_color": "#faf9f6",
+  "categories": ["food", "health", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
